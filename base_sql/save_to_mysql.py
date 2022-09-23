@@ -6,22 +6,24 @@ import pymysql
 
 
 def get_conn():
-    # 启动数据
-    db = pymysql.connect(host='localhost',
-                         user='root',       # 账号
-                         password='root',   # 密码
-                         database='kong',   # 数据库
-                         charset='utf8'     # 编码
-                        )
+    '''启动数据'''
+    db = pymysql.connect(
+            host='localhost',
+            user='root',        # 账号
+            password='',        # 密码
+            database='',        # 数据库
+            charset='utf8'      # 编码
+            )
     return db
 
 def data_to_mysql(datas, conn=get_conn()):
-    """写入数据库\n
-        + 启动数据库
-        + 创建游标
-        + 写入数据库
-        + 执行操作
-        + 关闭游标连接
+    """
+    =>写入数据库<=
+    | 启动数据库
+    | 创建游标
+    | 写入数据库
+    | 执行操作
+    | 关闭游标连接
     """
     def insert(cur, sql, args):
         # 插入数据
