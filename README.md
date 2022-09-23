@@ -17,7 +17,8 @@ Obtain the electricity bill data of the one-card platform developed by Zhengyuan
   3. 配置项
   ```ini
   在 base_sql.save_to_mysql 中配置Mysql
-  在 task_allele_data 中配置一卡通主机地址
+  在 task_allele_data 中配置一卡通电费访问地址
+  在 Mysql中创建表并设置两个字段(house, money)
   ```
 ---
 ## 未来发展
