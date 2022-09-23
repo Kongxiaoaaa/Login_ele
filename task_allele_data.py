@@ -14,9 +14,9 @@ from base_sql.save_to_mysql import data_to_mysql
 
 __all__ = 'get_cookies, parser_mian'
 session = session()
-HOST: str = '10.14.0.124' # 在此填入HOST地址(例如: 192.168.13.14)
-user='202127530334'
-pwd='102018'
+HOST: str = '' # 在此填入HOST地址(例如: 192.168.13.14)
+user: str = '' # 账号
+pwd: str = '' # 密码
 
 
 def get_cookies() -> tuple[str, dict]:
